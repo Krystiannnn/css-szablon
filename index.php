@@ -1,3 +1,9 @@
+<?php
+  
+ $pageName = $_GET['action'] ?? null;   
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -15,9 +21,15 @@
         Linux
      </div>
      <div id="menu">
-       <div class="option">Strona główna</div> 
-       <div class="option">Kategorie</div>
-       <div class="option">O autorach</div>
+       <div class="option">
+         <a style="color:white; text-decoration: none;" href="index.php">Strona główna</a>
+       </div> 
+       <div class="option">
+         <a style="color:white; text-decoration: none;" href="?action=page2">Kategorie</a>
+       </div>
+       <div class="option">
+         <a style="color:white; text-decoration: none;" href="?action=page3">O autorach</a>
+       </div>
        <div style="clear:both;"></div>
     </div>
     <div id="topbar">
@@ -34,13 +46,39 @@
       <div style="clear:both;"></div> 
     </div>  
     <div id="bmenu">
-        <div class="optionL">Strona główna</div> 
-        <div class="optionL">Kategorie</div>
-        <div class="optionL">O autorach</div>
+        <div class="optionL">
+          <a style="color:white; text-decoration: none;" href="index.php">Strona główna</a>
+        </div> 
+        <div class="optionL">
+          <a style="color:white; text-decoration: none;" href="?action=page2">Kategorie</a>
+        </div>
+        <div class="optionL">
+          <a style="color:white; text-decoration: none;" href="?action=page3">O autorach</a>
+        </div>
         <div style="clear:both;"></div>
     </div>
     <div id="content">
-        bleeee ble bl b e
+        
+        
+    
+        <?php if ($pageName === 'page2') : ?>
+           <?php
+               
+              require("kategorie.html");
+               
+            ?>
+       
+        <?php elseif ($pageName === 'page3') : ?>
+           
+               
+               
+           
+            
+           <h2>echo3</h2>
+           
+         
+         
+        <?php endif; ?>        
     </div>
     <div id="footer">
         Linux - najlepszy darmowy program operacyjny.Strona w sieci od 2015r.

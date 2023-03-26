@@ -99,6 +99,8 @@ body
     opacity: 0.8;
     
 }
+
+
 .option:hover
 {
     background-color: #000000;
@@ -118,6 +120,7 @@ body
     color: white;
     cursor: pointer;
 }
+
 .bigtitle
 {
     font-size: 32px;
